@@ -1,0 +1,73 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.category-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff; /* White background for items */
+    transition: box-shadow 0.3s ease; /* Animation for shadow */
+}
+
+.category-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+button {
+    background-color: #5cb85c; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Animation for background color */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
+.hidden {
+    display: none; /* Hide form initially */
+}
+
+.form-container {
+    margin-top: 20px;
+    background: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-in;
+}

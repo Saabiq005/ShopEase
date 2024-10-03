@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="readinventory.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>View Inventory</h1>
+
+        <div>
+            <label for="read-method">Select Read Method:</label>
+            <select id="read-method">
+                <option value="all">Read All Products</option>
+                <option value="name">Search by Name</option>
+                <option value="category">Search by Category</option>
+            </select>
+        </div>
+
+        <div id="read-name" style="display: none;">
+            <input type="text" id="search-name" placeholder="Enter product name" />
+            <button id="search-by-name">Search</button>
+        </div>
+
+        <div id="read-category" style="display: none;">
+            <label for="search-category">Select Category:</label>
+            <select id="search-category"></select>
+            <button id="search-by-category">Search</button>
+        </div>
+
+        <div class="product-grid" id="read-results"></div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <input type="number" id="items-per-page" placeholder="Items per page" min="1" value="1"/>
+            <button id="set-items-per-page">OK</button>
+        </div>
+        <div id="page-info"></div>
+        <div class="pagination" style="text-align: center;">
+            <button id="prev-page" style="display:none;">Previous</button>
+            <button id="next-page" style="display:none;">Next</button>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditForm()">&times;</span>
+            <div id="edit-form-container"></div>
+        </div>
+    </div>
+
+    <div id="edit-form" style="display: none;">
+        <h2>Edit Product</h2>
+        <label for="edit-title">Title:</label>
+        <input type="text" id="edit-title" required>
+        <label for="edit-description">Description:</label>
+        <input type="text" id="edit-description" required>
+        <label for="edit-category">Category ID:</label>
+        <input type="number" id="edit-category" required>
+        <label for="edit-price">Price:</label>
+        <input type="number" id="edit-price" required>
+        <label for="edit-quantity">Quantity:</label>
+        <input type="number" id="edit-quantity" required>
+        <label for="edit-image-url">Image URL:</label>
+        <input type="text" id="edit-image-url" required> <!-- New image URL input -->
+        <button id="update-product">Update Product</button>
+        <button onclick="document.getElementById('edit-form').style.display='none'">Cancel</button>
+    </div>
+    
+
+    <script src="readInventory.js"></script>
+
+</body>
+</html>

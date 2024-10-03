@@ -1,0 +1,235 @@
+/* home.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black; /* Changed background color to black */
+    color: white; /* Changed font color to white */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Changed navbar background to white */
+    padding: 10px 20px;
+    color: black; /* Changed font color to black for the navbar */
+}
+
+.header .logo {
+    font-size: 24px;
+    color: black; /* Ensures logo text is visible on the white navbar */
+}
+
+.header .search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.header #search-bar {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
+
+.header .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.header .nav li {
+    margin-left: 20px;
+}
+
+.header .nav a {
+    color: black; /* Changed font color to black */
+    text-decoration: none;
+    background-color: white; /* Button background color */
+    border: 1px solid black;
+    padding: 8px 15px;
+    border-radius: 20px; /* Makes 'a' elements rounded */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .nav a:hover {
+    background-color: black; /* Inverts colors on hover */
+    color: white;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 150px; /* Adjust as needed */
+    background-color: white;
+    color: black; /* Ensures text is visible on white product cards */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Center the modal */
+    padding: 20px;
+    border: 2px solid black; /* Black border for the modal */
+    border-radius: 10px; /* Rounded corners for the modal */
+    width: 40%; /* Medium size: Adjusted width for medium size */
+    max-width: 500px; /* Maximum width for larger screens */
+    text-align: center; /* Center content */
+    box-sizing: border-box; /* Include padding in width and height */
+}
+
+#modal-product-image {
+    width: 100%; /* Make image take up the full width of the modal content */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Optional: Limit the image height */
+    object-fit: contain; /* Ensure the image fits without being stretched */
+    margin-bottom: 15px; /* Space between image and other content */
+    background: whitesmoke;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Adjust the modal text and buttons */
+.modal-content h3 {
+    color: black; /* Product name in black */
+}
+
+.modal-content p {
+    color: black; /* Product description and price in black */
+}
+
+.quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#decrease-quantity, #increase-quantity {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#quantity {
+    text-align: center;
+    width: 50px;
+    margin: 0 10px;
+}
+
+.add-to-cart-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add styles for the search bar and dropdown */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Space between logo and search bar */
+}
+#search-bar {
+    width: 200px; /* Adjust width as needed */
+    padding: 8px;
+    border: 2px solid #ccc; /* Add border to search bar */
+    border-radius: 5px;
+    margin-right: 10px; /* Space between search bar and dropdown */
+}
+
+#search-category-select {
+    padding: 5px;
+    border: 2px solid #ccc; /* Border for dropdown */
+    border-radius: 5px;
+    margin-right: 10px; /* Space between dropdown and search bar */
+}
+
+.header.nav {
+    position: relative; /* Allow positioning of pseudo-elements */
+}
+
+.header.nav.active {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.7); /* Green shadow for focus effect */
+}
+
+#search-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50; /* Green background for search button */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adjust the logout button style */
+.logout-button {
+    margin-left: 20px; /* Space between search bar and logout button */
+    padding: 5px 10px;
+    border: none;
+    background-color: #f44336; /* Red background for logout */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

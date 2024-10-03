@@ -1,0 +1,130 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Match background color with home.css */
+    color: white; /* Match font color with home.css */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Match navbar background with home.css */
+    color: black; /* Match font color with home.css */
+    padding: 10px 20px;
+}
+
+/* Bold the logo text */
+.logo {
+    font-weight: bold;
+    font-size: 24px; /* Increase font size for emphasis */
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav a, .nav button {
+    color: black; /* Match navbar text color */
+    text-decoration: none;
+    background-color: white; /* Consistent button background color */
+    border: 1px solid black; /* Border to match home.css buttons */
+    padding: 8px 15px;
+    border-radius: 20px; /* Rounded corners to match home.css */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover, .nav button:hover {
+    background-color: black; /* Invert colors on hover */
+    color: white;
+}
+
+/* Cart container styling */
+.cart-container {
+    padding: 20px;
+}
+
+/* Cart item styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* White background for cart items */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: black; /* Ensure text is visible on white background */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Light shadow */
+}
+
+.cart-product-image {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin-right: 10px; /* Spacing between image and text */
+}
+
+/* Quantity container styling */
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* Button styling for quantity controls and remove button */
+button {
+    background-color: black; /* Match button background to home.css */
+    color: white; /* Match button text color */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white; /* Invert color on hover */
+    color: black;
+    border: 1px solid black;
+}
+
+/* Total price and proceed payment styling - Aligned to the left */
+#total-price {
+    text-align: left; /* Move total price to the left */
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Move proceed-payment-container to the left */
+.proceed-payment-container {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Proceed to Pay button in green */
+.proceed-payment-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.proceed-payment-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

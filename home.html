@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* Add styles for the search bar and logout button */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+ 
+        #search-bar {
+            width: 200px; /* Reduced size of the search bar */
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #search-btn {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #4CAF50; /* Green background for search button */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+ 
+        .logout-button {
+            margin-left: 20px; /* Space between search bar and logout button */
+            padding: 5px 10px;
+            border: none;
+            background-color: #f44336; /* Red background for logout */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">ShopEase</div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for products...">
+            <select id="search-category-select">
+                <option value="" selected>View All Products</option> <!-- "View All Products" option -->
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <nav class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <button id="logout-button" class="logout-button">Logout</button> <!-- Added Logout button -->
+    </header>
+ 
+    <!-- Products Section -->
+    <div id="products" class="products-container">
+        <!-- Products will be displayed here -->
+    </div>
+ 
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <img id="modal-product-image" src="" alt="">
+            <h3 id="modal-product-name"></h3>
+            <p id="modal-product-description"></p>
+            <p>Price: $<span id="modal-product-price"></span></p>
+            <div class="quantity-container">
+                <button id="decrease-quantity">-</button>
+                <input type="number" id="quantity" value="1" min="1" class="quantity-input">
+                <button id="increase-quantity">+</button>
+            </div>
+            <button id="add-to-cart" class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+ 
+    <script src="home.js"></script>
+    <script>
+        // Logout functionality
+        document.getElementById('logout-button').onclick = function() {
+            // Here you can clear any session data if necessary
+            alert('Logout successful!'); // Alert for logout success
+            window.location.href = 'login.html'; // Redirect to index.html
+        };
+    </script>
+</body>
+</html>
+
+
+

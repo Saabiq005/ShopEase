@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">ShopEase Admin</div>
+        <button id="logout-btn">Logout</button>
+    </header>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+        <h1>Welcome to the Admin Dashboard!</h1>
+    </div>
+
+    <div class="dashboard">
+        <!-- Manage Inventory -->
+        <div class="section">
+            <button class="main-btn" id="manage-inventory-btn">Manage Inventory</button>
+            <div class="sub-buttons" id="inventory-sub-buttons">
+                <button onclick="window.location.href='createcategory.html'">Create Category</button>
+                <button onclick="window.location.href='createinventory.html'">Create Inventory</button>
+                <button onclick="window.location.href='readinventory.html'">View Inventory</button>
+            </div>
+        </div>
+
+        <!-- Customer Management -->
+        <!-- Customer Management -->
+        <div class="section">
+            <button class="main-btn" id="customer-management-btn">Customer Management</button>
+            <div class="sub-buttons" id="customer-sub-buttons">
+                <button onclick="window.location.href='updatecredit.html'">Update Credit</button>
+            </div>
+        </div>
+
+
+        <!-- Reports -->
+        <div class="section">
+            <button class="main-btn" id="reports-btn">Reports</button>
+            <div class="sub-buttons">
+                <button onclick="window.location.href='customerreports.html'">Customer Reports</button>
+                <button onclick="window.location.href='inventoryreports.html'">Inventory Reports</button>
+                <button onclick="window.location.href='salesreports.html'">Sales Reports</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>"ShopEase – Your One-Stop Shop for Everything You Need!"</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

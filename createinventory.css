@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Light background */
+    color: #333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center; /* Center text for the header */
+}
+
+h1 {
+    color: #2c3e50; /* Dark blue color */
+    margin-bottom: 20px; /* Space below header */
+    position: relative;
+    z-index: 1; /* Ensure header is above form */
+}
+
+form {
+    background-color: #ffffff; /* White form background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    width: 300px; /* Fixed width for form */
+    display: inline-block; /* Center form relative to header */
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block; /* Make labels take up full width */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-top: 5px; /* Space above inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #2c3e50; /* Dark blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    background-color: #2c3e50; /* Dark blue button background */
+    color: #ffffff; /* White text on button */
+    border: none; /* No border */
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width for button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #1a242f; /* Darker blue on hover */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
